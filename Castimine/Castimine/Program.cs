@@ -4,6 +4,12 @@
     {
         static void Main(string[] args)
         {
+            double komakohagaarv = 9.55d;
+            Console.WriteLine((int)komakohagaarv);
+            int roundedarv = (int)Math.Round(komakohagaarv);
+            Console.WriteLine(roundedarv);
+
+
             int arv = 35;
             string arvtekstina = arv.ToString();
             Console.WriteLine(arvtekstina);
@@ -24,7 +30,6 @@
             float pikkusFm = float.Parse(pikkusm);
             int pikkuscm = (int)pikkusFm;
             Console.WriteLine($"Sinu pikkus sentimeetrites on: {pikkuscm}");
-
         }
     }
 }
