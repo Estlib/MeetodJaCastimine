@@ -23,14 +23,23 @@
             kasutajasisestus = KüsiSisendeid(kasutajasisestus, kasutajatulud, true);
             kasutajasisestus = "";
             kasutajasisestus = KüsiSisendeid(kasutajasisestus, kasutajakulud, false);
-
             //tee uus meetod, mis arvutab kokku järjendi sisu
-
-
-
             //hoia kogutulusid ja kogukulusid eraldi muutujates kasutades oma meetodit.
+            float tuludkokku = Arvutus(kasutajatulud);
+            float kuludkokku = Arvutus(kasutajakulud);
             //arvuta kasutajale tulude ja kulude põhjal tema hetkeseis.
+            float kontojääk = tuludkokku - kuludkokku;
             //Ümarda kasutajale tagastatav arv kahe komakohani. Ja kuva nimeline sõnum
+            Console.WriteLine($"{kasutajanimi}, sinu kontojääk on: {Math.Round(kontojääk,2)}");
+
+
+            
+
+
+
+          
+            
+            
             //while (kasutajasisestus != "rohkem pole")
 
             //{
@@ -46,11 +55,12 @@
 
         public static float Arvutus(List<float> kokkuarvutatavkollektsioon)
         {
+            float tulemus = 0.00f;
             foreach (var arv in kokkuarvutatavkollektsioon)
             {
-                
+                tulemus = tulemus + arv;
             }
-            return null;
+            return tulemus;
         }
 
         private static string KüsiSisendeid(string kasutajasisestus, List<float> kasutajatulud, bool whichone)
